@@ -11,3 +11,10 @@ Anjali Jain - 015244151
    - mvn exec:java -Dexec.mainClass=com.sjsu.billing.Billing
 - It will ask for input file location. Provide the path of input file
 
+### Brief Introduction
+
+### Design Patterns
+
+### Class Diagram
+
+### Testing and output screenshots
