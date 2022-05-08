@@ -1,4 +1,4 @@
-package com.sjsu.ordermanagement.helper;
+package com.sjsu.billing.helper;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,7 +10,7 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sjsu.ordermanagement.model.Order;
+import com.sjsu.billing.model.Order;
 
 public class InputFileReader {
 	

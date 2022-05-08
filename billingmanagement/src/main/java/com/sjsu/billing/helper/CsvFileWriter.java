@@ -1,4 +1,4 @@
-package com.sjsu.ordermanagement.helper;
+package com.sjsu.billing.helper;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-import com.sjsu.ordermanagement.model.Order;
+import com.sjsu.billing.model.Order;
 
 public class CsvFileWriter implements IOutputFileWriter {
 

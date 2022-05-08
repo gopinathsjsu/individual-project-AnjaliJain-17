@@ -1,11 +1,11 @@
-package com.sjsu.ordermanagement.repository;
+package com.sjsu.billing.repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.sjsu.ordermanagement.model.Item;
+import com.sjsu.billing.model.Item;
 
 public class Inventory {
 	

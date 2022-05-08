@@ -1,4 +1,4 @@
-package com.sjsu.ordermanagement.config;
+package com.sjsu.billing.config;
 
 import java.util.HashMap;
 import java.util.Map;

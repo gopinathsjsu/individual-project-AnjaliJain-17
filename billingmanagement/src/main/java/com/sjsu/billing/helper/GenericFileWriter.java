@@ -1,8 +1,8 @@
-package com.sjsu.ordermanagement.helper;
+package com.sjsu.billing.helper;
 
 import java.util.List;
 
-import com.sjsu.ordermanagement.model.ValidationResult;
+import com.sjsu.billing.model.ValidationResult;
 
 public class GenericFileWriter {
 

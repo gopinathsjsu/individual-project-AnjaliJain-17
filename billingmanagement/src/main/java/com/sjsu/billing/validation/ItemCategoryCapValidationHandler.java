@@ -1,11 +1,11 @@
-package com.sjsu.ordermanagement.validation;
+package com.sjsu.billing.validation;
 
 import java.util.List;
 
-import com.sjsu.ordermanagement.config.ItemCategoryCapConfig;
-import com.sjsu.ordermanagement.model.Order;
-import com.sjsu.ordermanagement.model.ValidationResult;
-import com.sjsu.ordermanagement.repository.Inventory;
+import com.sjsu.billing.config.ItemCategoryCapConfig;
+import com.sjsu.billing.model.Order;
+import com.sjsu.billing.model.ValidationResult;
+import com.sjsu.billing.repository.Inventory;
 
 public class ItemCategoryCapValidationHandler implements IValidationHandler {
 

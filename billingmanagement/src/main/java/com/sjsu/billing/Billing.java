@@ -1,4 +1,4 @@
-package com.sjsu.ordermanagement;
+package com.sjsu.billing;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,13 +6,13 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-import com.sjsu.ordermanagement.helper.GenericFileWriter;
-import com.sjsu.ordermanagement.helper.InputFileReader;
-import com.sjsu.ordermanagement.model.Item;
-import com.sjsu.ordermanagement.model.Order;
-import com.sjsu.ordermanagement.model.ValidationResult;
-import com.sjsu.ordermanagement.repository.Inventory;
-import com.sjsu.ordermanagement.validation.ValidationHandlerDriver;
+import com.sjsu.billing.helper.GenericFileWriter;
+import com.sjsu.billing.helper.InputFileReader;
+import com.sjsu.billing.model.Item;
+import com.sjsu.billing.model.Order;
+import com.sjsu.billing.model.ValidationResult;
+import com.sjsu.billing.repository.Inventory;
+import com.sjsu.billing.validation.ValidationHandlerDriver;
 
 public class Billing {
 

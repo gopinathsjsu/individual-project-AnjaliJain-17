@@ -1,4 +1,4 @@
-package com.sjsu.ordermanagement.model;
+package com.sjsu.billing.model;
 
 import java.util.Objects;
 

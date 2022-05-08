@@ -1,4 +1,4 @@
-package com.sjsu.ordermanagement.model;
+package com.sjsu.billing.model;
 
 public class ValidationResult {
 	private  boolean isValid;
