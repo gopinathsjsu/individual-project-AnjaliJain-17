@@ -36,11 +36,11 @@ Factory Method is a creational design pattern that uses factory methods to deal 
 ### Class Diagram
  ![Screenshot 4](output/classdiagram.png)
 ### Testing and output screenshots
-##### TestCase 1
+##### TestCase 1 : The input file is valid.
  ![Screenshot 4](output/testcase1.png)
- ##### TestCase 2
+ ##### TestCase 2 : Invalid item that does not exist in our inventory database is present in the input file. 
  ![Screenshot 5](output/testcase2.png)
- ##### TestCase 3
+ ##### TestCase 3 : Quantity requested is more than quantity available.
  ![Screenshot 6](output/testcase3.png)
- ##### TestCase 4
+ ##### TestCase 4 : No of items in a particular category exceeds the configured category cap.
  ![Screenshot 7](output/testcase4.png)
