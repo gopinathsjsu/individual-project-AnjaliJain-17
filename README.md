@@ -19,7 +19,7 @@ Chain of Responsibility, Singleton and Strategy design pattern is used for the i
 ### Design Patterns
 #### 1. Singleton
 Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance. This design pattern is implemented to maintain static inventory database. The constructor of this singleton class is made private to avoid object instatiation. There is a single instance of this class inside the JVM. All the modifications will happen to that single instance. Once the program is rerun, the database will restore its initial state i.e no older changes will be persisted.
-
+ ![Screenshot 1](output/singleton.png)
 
 #### 2. Chain of Responsibility
 This pattern is used to perform validations in step-by-step way. 
@@ -27,11 +27,12 @@ This pattern is used to perform validations in step-by-step way.
 2. Validate if the requested quantity for each item is permissible
 3. Validate if the total quantity of each category in one order matches the configured cap limit.
 The request is being passed to the chain of validation handlers. Each validation handler will decide whether to pass the request to the next validaiton handler or generate an error file.
-
+ ![Screenshot 2](output/cor.png)
 
 #### 3. Factory Design Pattern
 Factory Method is a creational design pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created. This design pattern is used to create final output file. If there is validation error, an object of defaultFileWriter will be returned. If there is no validation error, object of csvfilewriter will be returned. 
+ ![Screenshot 3](output/factory.png)
 
 ### Class Diagram
-
+ ![Screenshot 4](output/classdiagram.png)
 ### Testing and output screenshots
