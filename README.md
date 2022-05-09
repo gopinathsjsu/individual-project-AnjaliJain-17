@@ -9,7 +9,7 @@ Anjali Jain - 015244151
    - cd billingmanagement 
    - mvn clean compile install
    - mvn exec:java -Dexec.mainClass=com.sjsu.billing.Billing
-- It will ask for input file location. Provide the path of input file
+- It will ask for input file & output path location. Provide the necessary details
 
 ### Brief Introduction
 The application maintains an internal, static database (inventory of stock & card numbers)(developed using hashmap data structure). Everytime we re-run the program, the database will revert to its original state. The program will read an input csv file containing order details like items, quantity needed & payment card number. The program will perform certain validations as per the requirement. After this validation, if the cart is valid, prices for the card will be calculated. If the card number of the user is not present in the database, it will be added. Final output will be a csv file (output.csv) containing total amount paid.
