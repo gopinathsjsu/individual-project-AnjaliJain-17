@@ -36,3 +36,11 @@ Factory Method is a creational design pattern that uses factory methods to deal 
 ### Class Diagram
  ![Screenshot 4](output/classdiagram.png)
 ### Testing and output screenshots
+##### TestCase 1
+ ![Screenshot 4](output/testcase1.png)
+ ##### TestCase 2
+ ![Screenshot 5](output/testcase2.png)
+ ##### TestCase 3
+ ![Screenshot 6](output/testcase3.png)
+ ##### TestCase 4
+ ![Screenshot 7](output/testcase4.png)
