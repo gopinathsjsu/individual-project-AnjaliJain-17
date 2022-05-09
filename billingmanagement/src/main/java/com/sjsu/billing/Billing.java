@@ -19,13 +19,13 @@ public class Billing {
 	public  static String inputFilePath = "";
 	public  static String outputFilePath ="";
 	public static void main(String[] args) {
-		
-	///Users/anjalijain/Desktop/SJSU/Programming/files/input.csv
+		///Users/anjalijain/Desktop/SJSU/Programming/files/input.csv
 		///Users/anjalijain/Desktop/SJSU/Programming/files
+
 		List<Order> finalOrders = new ArrayList<>();
 		captureFilePath();
-		System.out.println("printing input file path"+inputFilePath);
-		System.out.println("printing output file path"+outputFilePath);
+		System.out.println("printing input file path : "+inputFilePath);
+		System.out.println("printing output file path : "+outputFilePath);
 		initializeInventoryDB();
 		List<Order> orders = readInputFile(inputFilePath);
 		ValidationHandlerDriver validator = new ValidationHandlerDriver();

@@ -29,14 +29,16 @@ public class ItemCategoryCapValidationHandler implements IValidationHandler {
 		StringBuilder errorMsg = new StringBuilder();
 		
 		if(essentialsCount> ItemCategoryCapConfig.categoryCap.get("Essentials")) {
-			errorMsg.append(" Exceeds permissible essentials cap limit");
+			errorMsg.append("Please correct quantities : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Essentials")+" Actual : "+essentialsCount);
 		}
 		if(luxuryCount> ItemCategoryCapConfig.categoryCap.get("Luxury")) {
-			errorMsg.append(" Exceeds permissible luxury cap limit");
+			errorMsg.append("Please correct quantities : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Luxury")+" Actual : "+luxuryCount);
+			
 		}
 		
 		if(	miscCount > ItemCategoryCapConfig.categoryCap.get("Misc")){
-			errorMsg.append(" Exceeds permissible misc cap limit");
+			errorMsg.append("Please correct quantities : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Misc")+" Actual : "+miscCount);
+			
 		}
 		
 		if(errorMsg.length()>0) {
