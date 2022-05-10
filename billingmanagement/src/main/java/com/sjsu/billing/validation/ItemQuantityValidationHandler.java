@@ -24,7 +24,7 @@ public class ItemQuantityValidationHandler implements IValidationHandler {
 		for(Order o : orders) {
 			int allowed = Inventory.getInstance().getItem(o.getItemName().toLowerCase()).getQuantity();
 			if(allowed - o.getQuantity()<0) {
-				errorMsg.append(" Insufficient quantity for item "+o.getItemName()+" allowed :"+allowed +"expected :"+o.getQuantity());
+				errorMsg.append(" Insufficient quantity for item "+o.getItemName()+" allowed :"+allowed  +"expected :"+o.getQuantity());
 			}
 		}
 		

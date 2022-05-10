@@ -1,6 +1,7 @@
 package com.sjsu.billing.validation;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import com.sjsu.billing.config.ItemCategoryCapConfig;
 import com.sjsu.billing.model.Order;
@@ -22,22 +23,32 @@ public class ItemCategoryCapValidationHandler implements IValidationHandler {
 		
 		Inventory inventorydb = Inventory.getInstance();
 	
-		int essentialsCount=(int) orders.stream().filter(o->inventorydb.getItem(o.getItemName().toLowerCase()).getCategory().equalsIgnoreCase("Essentials")).count();
-		int luxuryCount=(int) orders.stream().filter(o->inventorydb.getItem(o.getItemName().toLowerCase()).getCategory().equalsIgnoreCase("Luxury")).count();
-		int miscCount=(int) orders.stream().filter(o->inventorydb.getItem(o.getItemName().toLowerCase()).getCategory().equalsIgnoreCase("Misc")).count();
-		 
+		Stream<Order> essentialOrders = orders.stream().filter(o->inventorydb.getItem(o.getItemName().toLowerCase()).getCategory().equalsIgnoreCase("Essentials"));
+		int essentialsCount=essentialOrders.mapToInt(o->o.getQuantity()).sum();
+		System.out.println("Essential items count total"+essentialsCount);
+	
+		Stream<Order> luxuryorders = orders.stream().filter(o->inventorydb.getItem(o.getItemName().toLowerCase()).getCategory().equalsIgnoreCase("Luxury"));
+		int luxItems = luxuryorders.mapToInt(o->o.getQuantity()).sum();
+		System.out.println("Luxury items count total"+luxItems);
+		
+		
+		Stream<Order> miscOrders = orders.stream().filter(o->inventorydb.getItem(o.getItemName().toLowerCase()).getCategory().equalsIgnoreCase("Misc"));
+		
+		int miscCount=miscOrders.mapToInt(o->o.getQuantity()).sum();
+		System.out.println("Misc items count total"+miscCount);
+		
 		StringBuilder errorMsg = new StringBuilder();
 		
 		if(essentialsCount> ItemCategoryCapConfig.categoryCap.get("Essentials")) {
-			errorMsg.append("Please correct quantities : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Essentials")+" Actual : "+essentialsCount);
+			errorMsg.append("Please correct quantities for Essentials : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Essentials")+" Actual : "+essentialsCount);
 		}
-		if(luxuryCount> ItemCategoryCapConfig.categoryCap.get("Luxury")) {
-			errorMsg.append("Please correct quantities : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Luxury")+" Actual : "+luxuryCount);
+		if(luxItems> ItemCategoryCapConfig.categoryCap.get("Luxury")) {
+			errorMsg.append("Please correct quantities for Luxury : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Luxury")+" Actual : "+luxItems);
 			
 		}
 		
 		if(	miscCount > ItemCategoryCapConfig.categoryCap.get("Misc")){
-			errorMsg.append("Please correct quantities : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Misc")+" Actual : "+miscCount);
+			errorMsg.append("Please correct quantities for Misc : Permissible : "+ItemCategoryCapConfig.categoryCap.get("Misc")+" Actual : "+miscCount);
 			
 		}
 		
