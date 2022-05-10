@@ -44,4 +44,4 @@ Factory Method is a creational design pattern that uses factory methods to deal 
  ##### TestCase 3 : Quantity requested is more than quantity available.
  ![Screenshot 6](output/testcase3.png)
  ##### TestCase 4 : No of items in a particular category exceeds the configured category cap.
- ![Screenshot 7](output/testcase4.png)
+ ![Screenshot 7](output/testcase5.png)
